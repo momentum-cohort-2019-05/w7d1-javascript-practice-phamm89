@@ -143,20 +143,22 @@ function average(array){
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 
-// function minimum(array){
-//     if(array.length === 0){
-//         return undefined
-//     }
-//     if(array.length === 1){
-//         return array[0]
-//     }
-//     else{
-//         let minNumber = Math.min.apply(null, array)
-//         return minNumber
-//     }
+// Finding the minimum using Math.min.apply
+function minimum(array){
+    if(array.length === 0){
+        return undefined
+    }
+    if(array.length === 1){
+        return array[0]
+    }
+    else{
+        let minNumber = Math.min.apply(null, array)
+        return minNumber
+    }
 
-// }
+}
 
+// Finding the minimum using a for loop
 function minimum(array){
     if(array.length === 0){
         return undefined
@@ -199,6 +201,7 @@ function minimum(array){
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
+// selectionSort with Math.min.apply
 function selectionSort(array){
     var arrayCopy = array.slice(0)
 
@@ -216,6 +219,29 @@ function selectionSort(array){
         let minNumber = Math.min.apply(null, arrayCopy)
         arraySorted.push(minNumber)
         arrayCopy.splice(arrayCopy.indexOf(Math.min.apply(null, arrayCopy)), 1)
+        i++
+    }
+    return arraySorted
+}
+
+// selectionSort without Math.min.apply
+function selectionSort(array){
+    var arrayCopy = array.slice(0)
+
+    if (arrayCopy.length === 0){
+        return arrayCopy
+    }
+    if (arrayCopy.length === 1){
+        return arrayCopy
+    }
+
+    let arraySorted = []
+    let i = 0
+
+    while(i < array.length){
+        let minNumber = minimum(arrayCopy)
+        arraySorted.push(minNumber)
+        arrayCopy.splice(arrayCopy.indexOf(minNumber), 1)
         i++
     }
     return arraySorted
