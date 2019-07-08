@@ -246,3 +246,21 @@ function selectionSort(array){
     }
     return arraySorted
 }
+
+// selectionSort using one array 
+function selectionSort(array){
+    if (array === 0){
+        return array
+    }
+    if (array === 1){
+        return array
+    }
+    for (let i = 0; i < array.length; i++){
+        for(let nextIndex = i+1; nextIndex < array.length; nextIndex++){
+            if(array[nextIndex] < array[i]){
+                [array[i], array[nextIndex]] = [array[nextIndex], array[i]]
+            }
+        }
+    }
+    return array
+}
