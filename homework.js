@@ -22,7 +22,12 @@ function greeting(name) {
 // number which, when divided by 2, has a remainder of 1 or -1.
 
 function isOdd(number) {
-    if 
+    let detNum = number
+    if (detNum % 2 === 1 || detNum % 2 === -1){
+        return true
+    } else {
+        return false
+    }
 }
 
 // 5. Create a function called isEven that, given a number, will
