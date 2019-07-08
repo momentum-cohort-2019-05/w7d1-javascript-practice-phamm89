@@ -190,4 +190,15 @@ function selectionSort(array){
     if (arrayCopy.length === 1){
         return arrayCopy
     }
+
+    let arraySorted = []
+    let i = 0
+
+    while(i < array.length){
+        let minNumber = Math.min.apply(null, arrayCopy)
+        arraySorted.push(minNumber)
+        arrayCopy.splice(arrayCopy.indexOf(Math.min.apply(null, arrayCopy)), 1)
+        i++
+    }
+    return arraySorted
 }
