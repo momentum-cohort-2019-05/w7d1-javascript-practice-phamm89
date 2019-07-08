@@ -180,3 +180,11 @@ function minimum(array){
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+function selectionSort(array){
+    var arrayCopy = array.slice(0)
+
+    if (arrayCopy.length === 0){
+        return arrayCopy
+    }
+}
