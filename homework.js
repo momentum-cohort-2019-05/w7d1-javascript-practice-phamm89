@@ -187,4 +187,7 @@ function selectionSort(array){
     if (arrayCopy.length === 0){
         return arrayCopy
     }
+    if (arrayCopy.length === 1){
+        return arrayCopy
+    }
 }
