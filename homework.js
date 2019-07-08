@@ -126,6 +126,20 @@ function sum(array){
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
+function average(array){
+    if(array.length === 0){
+        return undefined
+    } else{
+        let total = 0
+        let average 
+        for (let number of array){
+            total += number
+        }
+        average = total / array.length
+        return average
+    }
+}
+
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 
