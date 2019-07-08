@@ -115,6 +115,14 @@ function multigreeting(name, code){
 // 10. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
+function sum(array){
+    let total = 0
+    for(let number of array){
+        total += number
+    }
+    return total
+}
+
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
