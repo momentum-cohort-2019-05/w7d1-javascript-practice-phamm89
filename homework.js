@@ -151,7 +151,8 @@ function minimum(array){
         return array[0]
     }
     else{
-        return Math.min.apply(Math, array)
+        let minNumber = Math.min.apply(null, array)
+        return minNumber
     }
 
 }
