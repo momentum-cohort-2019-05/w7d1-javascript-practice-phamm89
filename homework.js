@@ -94,6 +94,24 @@ function lesser(x, y){
 //
 // If any other language code is used, return nothing.
 
+function multigreeting(name, code){
+    if(code === 'en'){
+        return `Hello, ${name}!`
+    }
+    if(code === 'es'){
+        return `¡Hola, ${name}!`
+    }
+    if(code === 'fr'){
+        return `Bonjour, ${name}!`
+    }
+    if(code === 'eo'){
+        return `Saluton, ${name}!`
+    }
+    else{
+        return
+    }
+}
+
 // 10. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
