@@ -143,6 +143,20 @@ function average(array){
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 
+// function minimum(array){
+//     if(array.length === 0){
+//         return undefined
+//     }
+//     if(array.length === 1){
+//         return array[0]
+//     }
+//     else{
+//         let minNumber = Math.min.apply(null, array)
+//         return minNumber
+//     }
+
+// }
+
 function minimum(array){
     if(array.length === 0){
         return undefined
@@ -151,10 +165,14 @@ function minimum(array){
         return array[0]
     }
     else{
-        let minNumber = Math.min.apply(null, array)
+        let minNumber = array[0]
+        for (let i = 0; i < array.length; i++)
+            if(array[i] < minNumber){
+                minNumber = array[i]
+            }
         return minNumber
+    
     }
-
 }
 
 // 13. There are many techniques to sort arrays in programming. Your programming
